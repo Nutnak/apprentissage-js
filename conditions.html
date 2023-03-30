@@ -6,20 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-  // Service de streaming, on a 3 films, Lilo et Stitch, Matrix, Evil Dead.
-  // Si l'utilisateur à moins de 13 ans inclus, on va lui recommander Lilo et Stitch. S'il a entre 13 et 18 ans, on lui recommande Matrix. S'il a plus de 18 ans inclus, on va lui conseiller de regarder Evil Dead.
-  const year = 2023
-  const birthyear = prompt('Quel est votre année de naissance ?')
-  const age = year - birthyear
-      if (age <= 13) {
-        console.log('Nous vous conseillons Lilo et Stitch')
-      }
-      else if (age < 18) {
-        console.log('Nous vous conseillons Matrix')
-      }
-      else {
-        console.log('Nous vous conseillons Evil Dead')
-      }
+      // Demander à l'utilisateur 2 nombres. Il faut afficher les 2 nombres qu'on va multiplier entre eux, afficher la valeur et dire si elle est positive ou non.
+      const a = prompt('Donnez moi un nombre')
+      const b = prompt('Donnez moi un 2ème nombre')
+      const c = a * b
+      let signe
+      if (isNaN(c)) {
+        console.log(`Opération impossible : ${a} * ${b}`)
+      } else {
+          if (c > 0) {
+              signe = 'positif'
+          } else {
+              signe = 'négatif'
+          }
+          console.log(`${a} * ${b} = ${c} est ${signe}`)
+    }
   </script>
 </head>
 <body>
