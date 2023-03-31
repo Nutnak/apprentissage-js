@@ -7,27 +7,38 @@
   <title>Document</title>
 
   <script>
-    const notes = [12, 13, 14, 10, 9]
-    const person = {
-      firstname: 'John',
-      lastname: 'Doe'
-    }
-      for(let info in person) {
-        console.log(person[info])
-      }
       // Exercice : Demander à l'utilisateur un nombre entre 1 et 10. Une fois le nombre choisi, il faut afficher tous les chiffres en dessous de celui donné par l'utilisateur.
-      let nombre = 0
-      const nombre_utilisateur = prompt('Donnez moi un nombre entre 1 et 10')
-      if (nombre_utilisateur >= 1 && nombre_utilisateur <= 10) {
 
-        while(nombre < nombre_utilisateur) {
-          nombre = nombre + 1
-          console.log(nombre - 1)
+      // let nombre = 0
+      // const nombre_utilisateur = prompt('Donnez moi un nombre entre 1 et 10')
+      // if (nombre_utilisateur >= 1 && nombre_utilisateur <= 10) {
+
+      //   while(nombre < nombre_utilisateur) {
+      //     nombre = nombre + 1
+      //     console.log(nombre - 1)
+      //   }
+
+      // } else {
+      //   console.log("Désolé, vous n'avez pas choisi un nombre entre 1 et 10 ...")
+      // }
+
+      // Exercice 2 : L'utilisateur doit deviner un nombre choisi par moi même :)
+
+        let aleatoire_number = 8
+        let user_number
+
+        while (user_number !== aleatoire_number) {
+          user_number = prompt('Donnez moi votre chiffre') * 1 // <=== Ici, je multiplie la réponse de l'utilsateur par 1 pour convertir sa string en un integer.
+            if (user_number < aleatoire_number) {
+              console.log('Perdu! Le chiffre est plus élevé')
+            } else if (user_number > aleatoire_number) {
+              console.log('Perdu! Le chiffre est moins élevé')
+            }
         }
+        console.log('Félicitation, vous avez réussi')
 
-      } else {
-        console.log("Désolé, vous n'avez pas choisi un nombre entre 1 et 10 ...")
-      }
+
+
   </script>
 </head>
 <body>
