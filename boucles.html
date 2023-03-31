@@ -7,11 +7,15 @@
   <title>Document</title>
 
   <script>
-      const notes = [12, 15, 9, 17, 20, 10]
-      for(let nombre = 0; nombre < notes.length; nombre++) {
-        console.log(notes[nombre])
+    const notes = [12, 13, 14, 10, 9]
+    const person = {
+      firstname: 'John',
+      lastname: 'Doe'
+    }
+      for(let info in person) {
+        console.log(person[info])
       }
-
+      
   </script>
 </head>
 <body>
