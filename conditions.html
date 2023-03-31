@@ -7,20 +7,32 @@
   <title>Document</title>
   <script>
       // Demander à l'utilisateur 2 nombres. Il faut afficher les 2 nombres qu'on va multiplier entre eux, afficher la valeur et dire si elle est positive ou non.
-      const a = prompt('Donnez moi un nombre')
-      const b = prompt('Donnez moi un 2ème nombre')
-      const c = a * b
-      let signe
-      if (isNaN(c)) {
-        console.log(`Opération impossible : ${a} * ${b}`)
+    //   const a = prompt('Donnez moi un nombre')
+    //   const b = prompt('Donnez moi un 2ème nombre')
+    //   const c = a * b
+    //   let signe
+    //   if (isNaN(c)) {
+    //     console.log(`Opération impossible : ${a} * ${b}`)
+    //   } else {
+    //       if (c > 0) {
+    //           signe = 'positif'
+    //       } else {
+    //           signe = 'négatif'
+    //       }
+    //       console.log(`${a} * ${b} = ${c} est ${signe}`)
+    // }
+
+      // Demander à l'utilisateur 2 nombres. Il faut afficher les 2 nombres qu'on va multiplier entre eux, afficher la valeur et dire si elle est positive ou non.
+      const firstnumber = prompt('Donnez moi un premier nombre')
+      const secondnumber = prompt('Donnez moi un deuxieme nombre')
+      const result = firstnumber * secondnumber
+      if (result > 0) {
+        console.log(`${firstnumber} * ${secondnumber} = ${result} est positif`);
       } else {
-          if (c > 0) {
-              signe = 'positif'
-          } else {
-              signe = 'négatif'
-          }
-          console.log(`${a} * ${b} = ${c} est ${signe}`)
-    }
+        console.log(`${firstnumber} * ${secondnumber} = ${result} est negatif`);
+      }
+
+
   </script>
 </head>
 <body>
