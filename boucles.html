@@ -15,7 +15,19 @@
       for(let info in person) {
         console.log(person[info])
       }
-      
+      // Exercice : Demander à l'utilisateur un nombre entre 1 et 10. Une fois le nombre choisi, il faut afficher tous les chiffres en dessous de celui donné par l'utilisateur.
+      let nombre = 0
+      const nombre_utilisateur = prompt('Donnez moi un nombre entre 1 et 10')
+      if (nombre_utilisateur >= 1 && nombre_utilisateur <= 10) {
+
+        while(nombre < nombre_utilisateur) {
+          nombre = nombre + 1
+          console.log(nombre - 1)
+        }
+
+      } else {
+        console.log("Désolé, vous n'avez pas choisi un nombre entre 1 et 10 ...")
+      }
   </script>
 </head>
 <body>
