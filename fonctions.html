@@ -8,10 +8,15 @@
 
   <script>
 
+    let i = 0
+
     function greeting(name) {
+      i++
       console.log(`Bonjour ${name}`)
     }
-    console.log(greeting('Quentin'))
+    console.log(i)
+    greeting('Quentin')
+    console.log(i)
 
   </script>
 </head>
