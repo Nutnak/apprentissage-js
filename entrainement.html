@@ -13,18 +13,30 @@
 
     // Demander à l'utilisateur 2 nombres. Il faut afficher les 2 nombres qu'on va multiplier entre eux, afficher la valeur et dire si elle est positive ou non.
 
-      const firstnumber = prompt('Donnez moi un nombre')
-      const secondnumber = prompt('Donnez moi un deuxième nombre')
-      const result = firstnumber * secondnumber
+      // const firstnumber = prompt('Donnez moi un nombre')
+      // const secondnumber = prompt('Donnez moi un deuxième nombre')
+      // const result = firstnumber * secondnumber
 
-      if (result > 0) {
-        console.log(`L'opération est la suivante : ${firstnumber} * ${secondnumber} = ${result} est positif`)
-      } else {
-        console.log(`L'opération est la suivante : ${firstnumber} * ${secondnumber} = ${result} est négatif`)
+      // if (result > 0) {
+      //   console.log(`L'opération est la suivante : ${firstnumber} * ${secondnumber} = ${result} est positif`)
+      // } else {
+      //   console.log(`L'opération est la suivante : ${firstnumber} * ${secondnumber} = ${result} est négatif`)
+      // }
+
+    // L'utilisateur doit deviner un nombre choisi par moi même :)
+
+    let guess_number = 8
+    let user_number
+
+      while (user_number !== guess_number) {
+        user_number = prompt('Donnez moi votre chiffre') * 1
+        if (user_number > guess_number) {
+          console.log('Le chiffre est plus petit')
+        } else if (user_number < guess_number) {
+          console.log('Le chiffre est plus grand')
+        }
       }
-
-
-
+      console.log('Félicitation, vous avez réussi !')
 
 
   </script>
