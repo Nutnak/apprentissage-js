@@ -19,10 +19,47 @@
     // console.log(i)
 
     // console.log(`Hello`.toUpperCase())
-      function aleatoire(min, max) {
-        return Math.random() * (max - min) + min;
+      // function aleatoire(min, max) {
+      //   return Math.random() * (max - min) + min;
+      // }
+      // console.log(aleatoire(0, 10))
+
+      // const somme = (a, b) => {
+      //   return a + b
+      // }
+
+      // console.log(somme(1,2))
+
+      // ------ Exercice 1 ------
+
+      // Générer un nombre entre 1 et 10
+      // 3 essaie pour deviner le mot
+      // isRight(n)
+      // guess() et demandera à l'utilisateur de choisir un nombre, elle retournera true si c'est bon et false si c'est faux.
+
+      function aleatoire(max) {
+        return Math.floor(Math.random() * (max + 1))
       }
-console.log(aleatoire(20, 50))
+
+      const solution = aleatoire(10)
+
+      function isRight(n) {
+        return solution === n
+      }
+
+      function guess() {
+        const number = prompt('Entrez un chiffre') * 1
+        return isRight(number)
+      }
+
+      for (i = 0; i < 3; i++) {
+        if (guess()) {
+          console.log('Bravo')
+          break;
+        } else if (i === 2) {
+          console.log('Vous avez perdu')
+        }
+      }
   </script>
 </head>
 <body>
