@@ -12,17 +12,17 @@
 
     // ------ Exercice Palindrome ------
 
-    function isPalindrom(str) {
-      const motinverse = str
-          .split('')
-          .reverse()
-          .join('')
-          return motinverse
-        }
+    // function isPalindrom(str) {
+    //   const motinverse = str
+    //       .split('')
+    //       .reverse()
+    //       .join('')
+    //       return motinverse
+    //     }
 
 
 
-        console.log(isPalindrom(prompt("Donne moi un mot, je vais te l'écrire à l'envers !")))
+    //     console.log(isPalindrom(prompt("Donne moi un mot, je vais te l'écrire à l'envers !")))
 
 
         // if (isPalindrom() === 'word' ) {
@@ -37,28 +37,19 @@
         {
           name: 'John',
           notes: [1, 20 ,18 ,19 ,12]
-        }
-
-        {
-          name: 'Jane',
-          notes: [17, 12 ,18 ,11 ,12]
-        }
-
-        {
-          name: 'Sophie',
-          notes: [17, 11 ,9 ,19 ,13]
-        }
-
-        {
-          name: 'Marc',
-          notes: [17, 14 ,18 ,16 ,11]
-        }
-
-        {
-          name: 'Manon',
-          notes: [19, 10 ,12 ,19 ,14]
-        }
+        },
     ]
+
+
+    const johnNotes = student[0].notes;
+    let total = 0;
+
+    johnNotes.forEach(note => {
+      total += note;
+    });
+
+    const average = total / johnNotes.length
+    console.log(`La moyenne de Jhon est de ${average}`)
 
   </script>
 </head>
