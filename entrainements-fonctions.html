@@ -33,6 +33,8 @@
 
     // ------ Exercice moyenne ------
 
+    // Afficher la moyenne de chaque étudiant avec leur nom.
+
       const students = [
         {
           name: 'John',
@@ -73,22 +75,35 @@
 
 
 
-    students.forEach((student) => {
+    // students.forEach((student) => {
 
-      let totalnotes = 0;
-      let numnotes = student.notes.length;
+    //   let totalnotes = 0;
+    //   let numnotes = student.notes.length;
 
-      student.notes.forEach((note) => {
+    //   student.notes.forEach((note) => {
 
-        totalnotes += note;
+    //     totalnotes += note;
 
+    //     });
+
+    //   const moyenne = totalnotes / numnotes;
+
+    //   console.log(`La moyenne de ${student.name} est de ${moyenne}`)
+    // });
+
+      students.forEach((student) => {
+
+        let totalnotes = 0;
+        let totalnombrenote = student.notes.length;
+
+        student.notes.forEach((note) => {
+          totalnotes += note
         });
 
-      const moyenne = totalnotes / numnotes;
+        const moyenne = totalnotes / totalnombrenote;
+        console.log(`La moyenne de ${student.name} est de ${moyenne}`)
 
-      console.log(`La moyenne de ${student.name} est de ${moyenne}`)
-    });
-
+      });
 
 
   </script>
