@@ -61,30 +61,35 @@
   ];
 
 
-    const johnNotes = students[0].notes;
-    let total = 0;
+    // const johnNotes = students[0].notes;
+    // let total = 0;
 
-    johnNotes.forEach(note => {
-      total += note;
-    });
+    // johnNotes.forEach(note => {
+    //   total += note;
+    // });
 
-    const average = total / johnNotes.length
-    console.log(`La moyenne de Jhon est de ${average}`)
+    // const average = total / johnNotes.length
+    // console.log(`La moyenne de Jhon est de ${average}`)
 
-    let totalnote = 0;
-    let numnote = 0;
+
 
     students.forEach((student) => {
+
+      let totalnotes = 0;
+      let numnotes = student.notes.length;
+
       student.notes.forEach((note) => {
 
-        totalnote += note;
-        numnote++;
-      });
+        totalnotes += note;
+
+        });
+
+      const moyenne = totalnotes / numnotes;
+
+      console.log(`La moyenne de ${students.name} des notes est de ${moyenne}`)
     });
 
-    const moyenne = totalnote / numnote;
 
-    console.log(`La moyenne des notes est de ${moyenne}`)
 
   </script>
 </head>
