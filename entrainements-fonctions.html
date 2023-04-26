@@ -33,15 +33,35 @@
 
     // ------ Exercice moyenne ------
 
-    const student = [
+      const students = [
         {
           name: 'John',
           notes: [1, 20 ,18 ,19 ,12]
         },
-    ]
+
+        {
+          name: 'Jane',
+          notes: [17, 12 ,18 ,11 ,12]
+        },
+
+        {
+          name: 'Sophie',
+          notes: [17, 11 ,9 ,19 ,13]
+        },
+
+        {
+          name: 'Marc',
+          notes: [17, 14 ,18 ,16 ,11]
+        },
+
+        {
+          name: 'Manon',
+          notes: [19, 10 ,12 ,19 ,14]
+        }
+  ];
 
 
-    const johnNotes = student[0].notes;
+    const johnNotes = students[0].notes;
     let total = 0;
 
     johnNotes.forEach(note => {
@@ -50,6 +70,21 @@
 
     const average = total / johnNotes.length
     console.log(`La moyenne de Jhon est de ${average}`)
+
+    let totalnote = 0;
+    let numnote = 0;
+
+    students.forEach((student) => {
+      student.notes.forEach((note) => {
+
+        totalnote += note;
+        numnote++;
+      });
+    });
+
+    const moyenne = totalnote / numnote;
+
+    console.log(`La moyenne des notes est de ${moyenne}`)
 
   </script>
 </head>
