@@ -8,20 +8,37 @@
 
   <script>
 
+    // class Personne {
+    //   constructor(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //   }
+
+    //   sePresenter() {
+    //     console.log(`Je m'appelle ${this.name} et j'ai ${this.age} ans.`)
+    //   }
+
+    // }
+
+    // const personne1 = new Personne('Jean', 25)
+    // personne1.sePresenter()
+
     class Personne {
-      constructor(name, age) {
-        this.name = name;
-        this.age = age;
+      constructor(nom, age) {
+
+          this.nom = nom;
+          this.age = age;
       }
 
       sePresenter() {
-        console.log(`Je m'appelle ${this.name} et j'ai ${this.age} ans.`)
+        console.log(`Hello, my name is ${this.nom} and I'm ${this.age}`)
       }
 
     }
 
-    const personne1 = new Personne('Jean', 25)
-    personne1.sePresenter()
+    const personneQuentin = new Personne('Quentin', 22)
+    personneQuentin.sePresenter()
+
 
 
 
