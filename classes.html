@@ -23,6 +23,15 @@
     // const personne1 = new Personne('Jean', 25)
     // personne1.sePresenter()
 
+          function calculerMoyenne(notes) {
+        var somme = 0;
+        for (var i = 0; i < notes.length; i++) {
+          somme += notes[i];
+        }
+        var moyenne = somme / notes.length;
+        return moyenne;
+}
+
     class Personne {
       constructor(nom, age) {
 
@@ -34,15 +43,24 @@
         console.log(`Hello, my name is ${this.nom} and I'm ${this.age}`)
       }
 
-      setNotes(notes) {
-        this.notes = notes
+      set notes (v) {
+        if (Array.isArray(v)) {
+          this._notes = v
+        }
+      }
+
+      canPass() {
+        return calculerMoyenne(this._notes) > 10
       }
 
     }
 
     const personneQuentin = new Personne('Quentin', 22)
+
     personneQuentin.sePresenter()
-    personneQuentin.setNotes([10, 20, 13, 16, 17, 18])
+    personneQuentin.notes = [10]
+
+    console.log(personneQuentin.canPass())
 
 
 
