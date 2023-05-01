@@ -33,14 +33,14 @@
 }
 
     class Personne {
-      constructor(nom, age) {
+      constructor(firstname, lastname) {
 
-          this.nom = nom;
-          this.age = age;
+          this.firstname = firstname;
+          this.lastname = lastname;
       }
 
       sePresenter() {
-        console.log(`Hello, my name is ${this.nom} and I'm ${this.age}`)
+        console.log(`Hello, my name is ${this.firstname} and I'm ${this.lastname}`)
       }
 
       set notes (v) {
@@ -49,18 +49,23 @@
         }
       }
 
+      get name () {
+        return `${this.firstname} ${this.lastname}`
+      }
+
       canPass() {
         return calculerMoyenne(this._notes) > 10
       }
 
     }
 
-    const personneQuentin = new Personne('Quentin', 22)
+    const personneQuentin = new Personne('Quentin', 'Doulcet')
 
     personneQuentin.sePresenter()
     personneQuentin.notes = [10]
 
     console.log(personneQuentin.canPass())
+    console.log(personneQuentin.name)
 
 
 
