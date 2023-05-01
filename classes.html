@@ -34,10 +34,15 @@
         console.log(`Hello, my name is ${this.nom} and I'm ${this.age}`)
       }
 
+      setNotes(notes) {
+        this.notes = notes
+      }
+
     }
 
     const personneQuentin = new Personne('Quentin', 22)
     personneQuentin.sePresenter()
+    personneQuentin.setNotes([10, 20, 13, 16, 17, 18])
 
 
 
