@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    class Rectangle {
+
+      constructor(longueur, largeur) {
+        this.longueur = longueur
+        this.largeur = largeur
+      }
+
+      get perimeter() {
+        const resultat = ((2 * this.longueur) + (2 * this.largeur))
+        return `Le périmètre du cercle est de ${resultat} cm`
+      }
+
+      get isValid() {
+        if (this.longueur <= 0 || this.largeur <= 0) {
+          return `Il est impossible de trouver le périmètre d'un objet si ses dimensions sont négatives.`
+        } else {
+          return `Tout va bien, les mesures sont positives.`
+        }
+      }
+
+    }
+
+      const r = new Rectangle(10, 20);
+      console.log(r)
+      console.log(r.perimeter)
+      console.log(r.isValid)
+      const r2 = new Rectangle(-10, 20);
+      console.log(r2.isValid)
+      // const c = new Square(10);
+      // console.log(c.perimeter)
+      // console.log(c.isBiggerThan(r))
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
